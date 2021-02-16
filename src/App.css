@@ -16,12 +16,16 @@
 }
 
 .App-header {
-  min-height: 80vh;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+a {
   color: white;
 }
 
@@ -32,6 +36,7 @@
 .super-hidden-text {
   font-size: calc(30px);
   color: #282c34;
+  padding: 0 10vw;
 }
 
 @keyframes App-logo-spin {

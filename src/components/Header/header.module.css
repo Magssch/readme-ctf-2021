@@ -1,0 +1,16 @@
+.header {
+  background-color: black;
+  color: white;
+  display: flex;
+}
+
+.headerText {
+  margin: auto 0 auto auto;
+  padding: 20px;
+}
+
+.headerLink {
+  margin: auto auto auto 0;
+  padding: 20px;
+  color: white;
+}
