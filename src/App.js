@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import logo from "./images/readme.png";
 import "./App.css";
 import { Switch, Route, BrowserRouter as Router, Link } from "react-router-dom";
 import CuriousImage from "./pages/CuriousImage";

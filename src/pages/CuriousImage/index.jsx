@@ -11,10 +11,13 @@ const CuriousImage = () => {
         alignItems: "center",
       }}
     >
-      <h1>Look at this great image, we have the best images!</h1>
+      <h1>
+        Dette bildet kan du beholde, en gave fra{" "}
+        <span style={{ fontFamily: "OCRA" }}>readme</span> ❤️
+      </h1>
       <img
         src={curiousImage}
-        alt={"Don't mind this, this is just an image!"}
+        alt={"Et flott bilde"}
         style={{ maxHeight: "80vh" }}
       />
     </div>

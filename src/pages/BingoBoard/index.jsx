@@ -53,11 +53,42 @@ const BingoBoard = () => {
   const [bingoRows, setBingoRows] = useState([false, false, false, false]);
   const [bingoCols, setBingoCols] = useState([false, false, false, false]);
   const [showBingo, setShowBingo] = useState(false);
+  const [trueBingo, setTrueBingo] = useState([]);
 
   const updateBingoBoard = (index) => {
     let board = [...bingoBoardState];
     board[index] = !board[index];
     setBingoBoardState(board);
+  };
+
+  const requestBingo = (bingo) => {
+    fetch(
+      "https://readme-ctf-v2021.web.app/.cloudfunctions.net/getBingoValue",
+      {
+        method: "POST",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          values: bingo,
+        }),
+      }
+    )
+      //.then((response) => response.json())
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((err) => console.log(err));
+  };
+
+  const checkTrueBingo = (newValue) => {
+    let newTrueBingo = [...trueBingo, bingoBoardContent[newValue]];
+    if (newTrueBingo.length >= 6) {
+      requestBingo(newTrueBingo);
+      newTrueBingo = [bingoBoardContent[newValue]];
+    }
+    setTrueBingo(newTrueBingo);
   };
 
   useEffect(() => {
@@ -115,7 +146,10 @@ const BingoBoard = () => {
             key={index}
             selected={bingoBoardState[index]}
             content={bingoBoardContent[index]}
-            onClick={() => updateBingoBoard(index)}
+            onClick={() => {
+              updateBingoBoard(index);
+              checkTrueBingo(index);
+            }}
           />
         ))}
       </div>

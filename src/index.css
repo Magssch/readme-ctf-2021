@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "OCRA";
+  src: local("OCRA"), url("./fonts/OCR A Std.ttf") format("truetype");
+}
+
 html,
 #root {
   height: 100%;
