@@ -2,6 +2,27 @@ import BingoCell from "components/BingoCell";
 import React, { useEffect, useState } from "react";
 import styles from "./bingoBoard.module.css";
 
+function shuffle(array) {
+  const newArray = [...array];
+  var currentIndex = newArray.length,
+    temporaryValue,
+    randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = newArray[currentIndex];
+    newArray[currentIndex] = newArray[randomIndex];
+    newArray[randomIndex] = temporaryValue;
+  }
+
+  return newArray;
+}
+
 const BingoBoard = () => {
   const [bingoBoardState, setBingoBoardState] = useState([
     false,
@@ -22,13 +43,11 @@ const BingoBoard = () => {
     false,
   ]);
 
-  const possibleVals = "41 42 41 4b 55 53 20 4f 4e 4c 49 4e 45 20 48 59 42 52 49 44 41 20 4a 41 4e 55 53 20 44 45 4c 54 41 20 4e 41 42 4c 41 20 54 49 48 4c 44 45".split(
+  const possibleVals = "41 42 41 4b 55 53 20 4f 4e 4c 49 4e 45 20 48 59".split(
     " "
   );
   const [bingoBoardContent, setBingoBoardContent] = useState(
-    Array.from({ length: 16 }, () => 0).map(
-      (num) => possibleVals[Math.floor(Math.random() * possibleVals.length)]
-    )
+    shuffle(possibleVals)
   );
 
   const [bingoRows, setBingoRows] = useState([false, false, false, false]);
