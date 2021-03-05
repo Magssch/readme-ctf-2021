@@ -24,7 +24,7 @@ const CtfIntro = () => {
       </Link>{" "}
       <br />
       <Link to={"/hackerman"} className={styles.tertiary}>
-        TEST
+        TODO: IKKE FERDIG
       </Link>
     </main>
   );

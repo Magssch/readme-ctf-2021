@@ -9,6 +9,7 @@ const CuriousImage = () => {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
+        padding: "2rem",
       }}
     >
       <h1>

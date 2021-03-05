@@ -62,20 +62,16 @@ const BingoBoard = () => {
   };
 
   const requestBingo = (bingo) => {
-    fetch(
-      "https://readme-ctf-v2021.web.app/.cloudfunctions.net/getBingoValue",
-      {
-        method: "POST",
-        mode: "cors",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          values: bingo,
-        }),
-      }
-    )
-      //.then((response) => response.json())
+    fetch("https://readme-ctf-v2021.web.app/api/getBingoValue", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        values: bingo,
+      }),
+    })
+      .then((response) => response.json())
       .then((response) => {
         console.log(response);
       })
@@ -154,8 +150,8 @@ const BingoBoard = () => {
         ))}
       </div>
       <p style={{ backgroundColor: "black", margin: 0 }}>
-        41 42 41 4b 55 53 20 4f 4e 4c 49 4e 45 20 48 59 42 52 49 44 41 20 4a 41
-        4e 55 53 20 44 45 4c 54 41 20 4e 41 42 4c 41 20 54 49 48 4c 44 45
+        20 4f 4e 4c 49 4e 45 20 48 59 42 52 49 44 41 20 4a 41 4e 55 53 20 44 45
+        4c 54 41 20 41 42 41 4b 55 53 20 4e 41 42 4c 41 20 54 49 48 4c 44 45
       </p>
     </>
   );
