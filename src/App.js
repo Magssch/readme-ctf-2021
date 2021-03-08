@@ -8,8 +8,6 @@ import BingoBoard from "pages/BingoBoard";
 import Header from "components/Header";
 import ZenChallenge from "pages/ZenChallenge";
 
-//return Buffer.from(input).toString("base64");
-
 function App() {
   return (
     <Router>
@@ -31,7 +29,7 @@ function App() {
               "Flagg fra CTF" og legg med ditt navn. De(n) som samler flest
               flagg kan vinne gavekort på Foodora!
             </div>
-            <header className="App-header">
+            <header className="start">
               <img src={logo} className="App-logo" alt="logo" />
               <br />
               <br />

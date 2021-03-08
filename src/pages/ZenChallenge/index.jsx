@@ -131,8 +131,7 @@ const ZenChallenge = () => {
                 padding: "3rem",
               }}
             >
-              Error code:{" "}
-              {verySecureEncryptionFunction("readmeCTF{2QMT8ZLJFELMKH58}")}
+              Error code: {"r̈eͨZ9eȰTƐqCQǀTɠP<JɠEɘC+HϨ8"}
             </h2>
           </div>
         </Route>
