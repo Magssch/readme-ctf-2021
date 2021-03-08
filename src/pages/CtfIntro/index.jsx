@@ -4,7 +4,7 @@ import styles from "./ctfIntro.module.css";
 
 const info = [
   "Det er jammen mye rart man kan skule i en hvit bakgrunn!",
-  "Send flaggene dine til konkurranser@abakus.no",
+  "Send flaggene dine til konkurranser[at]abakus.no",
   "https://s.ntnu.no/flag",
   "Visste du at det bare er 0.1% sjanse for at denne teksten vises?",
 ];
@@ -20,11 +20,11 @@ const CtfIntro = () => {
       </Link>
       <br />
       <Link to={"/bingo"} className={styles.secondary}>
-        La meg spille bingo!
+        Jeg vil spille bingo
       </Link>{" "}
       <br />
-      <Link to={"/hackerman"} className={styles.tertiary}>
-        TODO: IKKE FERDIG
+      <Link to={"/zen-challenge"} className={styles.tertiary}>
+        Trenger du en liten timeout?
       </Link>
     </main>
   );
