@@ -5,3 +5,5 @@ This is the repository for a Jeopardy-style CTF with web, steganography and reve
 There are four challenges in total, a web-based challenge, a steganography challenge, as well as a reverse-engineering challenge. The last challenge is a riddle, requiring sleuth in order to identify how to access the last flag.
 
 [Link to deployment](https://readme-ctf-v2021.web.app)
+
+Using create-react-app and Firebase for deployment and function-based API.
