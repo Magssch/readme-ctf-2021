@@ -8,7 +8,7 @@
 }
 
 .App-logo {
-  height: 30vh;
+  height: 25vh;
 }
 
 .start {
@@ -33,4 +33,32 @@ a {
   font-size: calc(30px);
   color: #282c34;
   padding: 0 10vw;
+}
+
+.link {
+  border: 0px solid black;
+  color: white;
+  background-color: transparent;
+  padding: 1rem;
+  border-radius: 10px;
+  text-decoration: underline;
+}
+
+.link:hover {
+  background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 6s ease-in-out infinite;
+  color: white;
+  text-decoration: none;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
